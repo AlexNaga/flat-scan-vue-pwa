@@ -1,17 +1,24 @@
 <template>
   <div class="card-list">
     <div class="container is-fluid">
-      <Card />
+      <Card
+        title="An example title"
+        rent="1337"
+        area="42"
+        mapUrl="A map URL"
+        imgUrl="https://bulma.io/images/placeholders/1280x960.png"
+        dateAdded="asd 420"
+      />
     </div>
   </div>
 </template>
 
 <script>
-import Card from './Card.vue';
+import Card from './Card';
 
 export default {
   name: 'CardList',
-  props: {
+  components: {
     Card,
   },
 };
@@ -19,18 +26,8 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
-h3 {
-  margin: 40px 0 0;
-}
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-a {
-  color: #42b983;
+.card-list {
+  margin-left: 30px;
+  margin-right: 30px;
 }
 </style>
