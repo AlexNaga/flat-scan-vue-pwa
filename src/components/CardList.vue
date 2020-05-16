@@ -22,6 +22,9 @@ export default {
     Card,
   },
 };
+
+// const url = '';
+// const getData = () => {};
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->

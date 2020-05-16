@@ -1,4 +1,4 @@
-# vue-pwa
+# flat-scan-vue-pwa
 
 ## Project setup
 ```
