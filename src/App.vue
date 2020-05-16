@@ -1,17 +1,20 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" />
+    <Header titleMsg="Welcome to flatScan" subTitleMsg="Here are the current available flats." />
+    <CardList />
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue';
+import Header from './components/Header.vue';
+import CardList from './components/CardList.vue';
 
 export default {
   name: 'App',
   components: {
-    HelloWorld,
+    Header,
+    CardList,
   },
 };
 </script>
