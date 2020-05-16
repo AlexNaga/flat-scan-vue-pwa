@@ -11,7 +11,7 @@
         <p class="subtitle is-5">Rent: {{ rent }} kr</p>
         <p class="subtitle is-5">Area: {{ area }} m²</p>
         <a :href="mapUrl">Click to view on Google maps</a>
-        <p class="subtitle is-6">Date added: {{ dateAdded }}</p>
+        <p class="subtitle is-6">Date updated: {{ dateUpdated }}</p>
       </div>
     </div>
   </div>
@@ -26,7 +26,7 @@ export default {
     area: String,
     mapUrl: String,
     imgUrl: String,
-    dateAdded: String,
+    dateUpdated: String,
   },
 };
 </script>

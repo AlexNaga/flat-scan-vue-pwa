@@ -7,7 +7,7 @@
         area="42"
         mapUrl="A map URL"
         imgUrl="https://bulma.io/images/placeholders/1280x960.png"
-        dateAdded="asd 420"
+        dateUpdated="asd 420"
       />
     </div>
   </div>
