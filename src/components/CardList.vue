@@ -30,7 +30,6 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
 .card-list {
-  margin-left: 30px;
-  margin-right: 30px;
+  margin: 0 30px 30px 30px;
 }
 </style>
