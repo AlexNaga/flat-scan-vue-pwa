@@ -1,19 +1,29 @@
 <template>
   <div id="app">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" />
-    <Header titleMsg="Welcome to flatScan" subTitleMsg="Here are the current available flats." />
+
+    <div class="header">
+      <img alt="flatScan logo" src="./assets/img/bunny.png" />
+
+      <section class="hero">
+        <div class="hero-body">
+          <div class="container">
+            <h1 class="title">Welcome to flatScan</h1>
+          </div>
+        </div>
+      </section>
+    </div>
+
     <CardList />
   </div>
 </template>
 
 <script>
-import Header from './components/Header.vue';
 import CardList from './components/CardList.vue';
 
 export default {
   name: 'App',
   components: {
-    Header,
     CardList,
   },
 };
@@ -27,5 +37,6 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 50px;
+  padding-bottom: 30px;
 }
 </style>

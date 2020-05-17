@@ -1,56 +1,64 @@
 <template>
   <div class="card-list">
-    <div class="container is-fluid">
-      <ul v-for="service in services" :key="service.id">
-        <li v-for="flat in service.flats" :key="flat">
+    <transition appear name="fade" mode="out-in">
+      <div class="subtitle is-5" v-if="isLoading" key="loading">LOADING...</div>
+
+      <div class="content-wrapper" v-else key="flat-list">
+        <h1 class="subtitle">{{ availableFlats }}</h1>
+
+        <div class="grid-container">
           <Card
-            :title="flat"
-            :rent="1337"
+            v-for="flat in flats"
+            :key="flat"
+            :title="flat.title"
+            rent="1337"
             area="42"
             mapUrl="A map URL"
             imgUrl="https://bulma.io/images/placeholders/1280x960.png"
             dateUpdated="asd 420"
           />
-        </li>
-      </ul>
-    </div>
+        </div>
+      </div>
+    </transition>
   </div>
 </template>
 
 <script>
 import Card from './Card';
+const env = process.env;
 
 export default {
   name: 'CardList',
   components: {
     Card,
   },
-  data() {
-    return {
-      services: {},
-    };
+  data: () => ({
+    isLoading: false,
+    flats: [],
+  }),
+  computed: {
+    availableFlats() {
+      return this.flats.length > 0 ? 'Here are the current available flats.' : 'There are no new flats available...';
+    },
   },
-  beforeMount() {
+  created() {
+    this.isLoading = true;
     this.getData();
   },
   methods: {
     async getData() {
-      // TODO: How to add envs to vue?
-      const url = 'https://k8b2vri9ga.execute-api.eu-north-1.amazonaws.com/test/flats';
-      const apiKey = 'Yg0SAzdhgV1jirIXPDy941lvR4pW1AXB8iccJGjd';
       const options = {
-        headers: { 'x-api-key': apiKey },
+        headers: { 'x-api-key': env.VUE_APP_API_KEY },
       };
 
-      // this.loading = true;
-
-      const res = await fetch(url, options);
+      const res = await fetch(env.VUE_APP_URL, options);
       const data = await res.json();
+      const combinedData = data.flatMap(service => [...service.flats]);
 
-      // this.loading = false;
-      console.log(data);
-
-      this.services = data ? data : [];
+      setTimeout(() => {
+        this.isLoading = false;
+        this.flats = combinedData ? combinedData : [];
+      }, 800);
     },
   },
 };
@@ -59,6 +67,33 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
 .card-list {
-  margin: 0 30px 30px 30px;
+  padding: 0 20px;
+}
+
+.card {
+  box-shadow: 0 0.5em 1em -0.125em rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.02);
+  overflow: hidden;
+  border-radius: 3px;
+}
+
+.grid-container {
+  display: grid;
+  grid-gap: 30px;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  max-width: 1200px;
+  margin: auto;
+}
+
+.fade {
+  &-enter-active,
+  &-leave-active {
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+  }
+
+  &-enter,
+  &-leave-to {
+    opacity: 0;
+    transform: translateY(1rem);
+  }
 }
 </style>
