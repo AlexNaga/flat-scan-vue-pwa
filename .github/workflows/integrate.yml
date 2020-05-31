@@ -11,6 +11,9 @@ jobs:
       - uses: actions/checkout@master
       - uses: actions/setup-node@master
         with:
-          node-version: '12'
+          node-version: '12.x'
       - run: npm ci
       - run: npm run build
+        env:
+          VUE_APP_URL: ${{ secrets.API_URL }}
+          VUE_APP_API_KEY: ${{ secrets.API_KEY }}
