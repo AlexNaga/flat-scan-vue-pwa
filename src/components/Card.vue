@@ -10,7 +10,7 @@
         <p class="title is-4">{{ title }}</p>
         <p class="subtitle is-5">Rent: {{ rent }} kr</p>
         <p class="subtitle is-5">Area: {{ area }} m²</p>
-        <a :href="mapUrl">Click to view on Google maps</a>
+        <a :href="mapUrl">View on Google maps</a>
         <p class="subtitle is-6">Date updated: {{ dateUpdated }}</p>
       </div>
     </div>
