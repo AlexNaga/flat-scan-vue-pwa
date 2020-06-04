@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/flat-scan-vue-pwa/precache-manifest.c5d888147e5e7156b0b472153675e168.js"
+  "/flat-scan-vue-pwa/precache-manifest.d55541c7862860bac85236a096b112f8.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "flatScan"});
