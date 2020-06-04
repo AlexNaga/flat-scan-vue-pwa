@@ -2,14 +2,15 @@
   <div class="card">
     <div class="card-image">
       <figure class="image is-1by1">
-        <img :src="imgUrl" />
+        <a :href="url">
+          <img :src="imgUrl" />
+        </a>
       </figure>
     </div>
     <div class="card-content">
       <div class="content">
-        <p class="title is-4">{{ title }}</p>
-        <p class="subtitle is-5">Rent: {{ rent }} kr</p>
-        <p class="subtitle is-5">Area: {{ area }} m²</p>
+        <p class="subtitle is-6" v-for="(value, name) in data" :key="name">{{ name }}: {{ value }}</p>
+        <!-- <p class="subtitle is-5">Area: {{ area }} m²</p> -->
         <a :href="mapUrl">View on Google maps</a>
         <p class="subtitle is-6">Date updated: {{ dateUpdated }}</p>
       </div>
@@ -22,10 +23,10 @@ export default {
   name: 'Card',
   props: {
     title: String,
-    rent: String,
-    area: String,
+    data: Object,
     mapUrl: String,
     imgUrl: String,
+    url: String,
     dateUpdated: String,
   },
 };

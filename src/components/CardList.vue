@@ -9,12 +9,11 @@
         <div class="grid-container">
           <Card
             v-for="flat in flats"
-            :key="flat"
-            :title="flat.title"
-            rent="1337"
-            area="42"
+            :key="flat.id"
+            :data="flat.data"
             mapUrl="A map URL"
-            imgUrl="https://bulma.io/images/placeholders/1280x960.png"
+            :imgUrl="flat.imgUrl"
+            :url="flat.url"
             dateUpdated="asd 420"
           />
         </div>
@@ -51,9 +50,12 @@ export default {
         headers: { 'x-api-key': env.VUE_APP_API_KEY },
       };
 
-      const res = await fetch(env.VUE_APP_URL, options);
-      const data = await res.json();
+      const result = await fetch(env.VUE_APP_URL, options);
+      const data = await result.json();
+
       const combinedData = data.flatMap(service => [...service.flats]);
+
+      console.log(combinedData);
 
       setTimeout(() => {
         this.isLoading = false;
