@@ -72,12 +72,6 @@ export default {
   padding: 0 20px;
 }
 
-.card {
-  box-shadow: 0 0.5em 1em -0.125em rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.02);
-  overflow: hidden;
-  border-radius: 3px;
-}
-
 .grid-container {
   display: grid;
   grid-gap: 30px;

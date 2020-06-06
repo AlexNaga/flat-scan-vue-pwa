@@ -30,6 +30,11 @@ export default {
 </script>
 
 <style lang="scss">
+html {
+  background-color: #ffffff;
+  background-image: url('/img/soft-wallpaper.png');
+}
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
