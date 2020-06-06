@@ -10,11 +10,11 @@
           <Card
             v-for="flat in flats"
             :key="flat.id"
-            :data="flat.data"
+            :data="[flat.data]"
             mapUrl="A map URL"
             :imgUrl="flat.imgUrl"
             :url="flat.url"
-            dateUpdated="asd 420"
+            dateUpdated="asd"
           />
         </div>
       </div>
