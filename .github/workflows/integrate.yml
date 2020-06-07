@@ -25,14 +25,14 @@ jobs:
           VUE_APP_URL: ${{ secrets.API_URL }}
           VUE_APP_API_KEY: ${{ secrets.API_KEY }}
 
-      - name: Find and replace to prod path
+      - name: Find and replace bg path to prod
         uses: jacobtomlinson/gha-find-replace@0.1.1
         with:
-          find: "url(/img/"
-          replace: "url(/flat-scan-vue-pwa/img/"
+          find: "/img/soft-wallpaper.png"
+          replace: "/flat-scan-vue-pwa/img/soft-wallpaper.png"
           include: "dist/"
 
-      - name: Find and replace to prod path
+      - name: Find and replace icons paths to prod
         uses: jacobtomlinson/gha-find-replace@0.1.1
         with:
           find: '"/img/'
