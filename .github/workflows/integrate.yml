@@ -25,6 +25,13 @@ jobs:
           VUE_APP_URL: ${{ secrets.API_URL }}
           VUE_APP_API_KEY: ${{ secrets.API_KEY }}
 
+      - name: Find and Replace
+        uses: jacobtomlinson/gha-find-replace@0.1.1
+        with:
+          find: "/img/soft-wallpaper.png"
+          replace: "/flat-scan-vue-pwa/img/soft-wallpaper.png"
+          include: "dist/"
+
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@releases/v3
         with:
