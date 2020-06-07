@@ -36,7 +36,7 @@ jobs:
         uses: jacobtomlinson/gha-find-replace@0.1.1
         with:
           find: '"/img/'
-          replace: "/flat-scan-vue-pwa/img/"
+          replace: '"/flat-scan-vue-pwa/img/'
           include: "dist/"
 
       - name: Deploy 🚀
