@@ -25,7 +25,7 @@ jobs:
           VUE_APP_URL: ${{ secrets.API_URL }}
           VUE_APP_API_KEY: ${{ secrets.API_KEY }}
 
-      - name: Find and Replace
+      - name: Find and replace to prod path
         uses: jacobtomlinson/gha-find-replace@0.1.1
         with:
           find: "/img/soft-wallpaper.png"
