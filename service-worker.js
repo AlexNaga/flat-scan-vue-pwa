@@ -1,4 +1,4 @@
-importScripts("/flat-scan-vue-pwa/precache-manifest.f5fc4c23d8e5aef4d1d0d949a8265a0a.js", "https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
+importScripts("/flat-scan-vue-pwa/precache-manifest.10f0c37388d64fc06551d9258079128c.js", "https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 // TODO: Add Web Push
 
