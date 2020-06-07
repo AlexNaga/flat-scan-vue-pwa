@@ -39,6 +39,13 @@ jobs:
           replace: '"/flat-scan-vue-pwa/img/'
           include: "dist/"
 
+      - name: Find and replace icons paths to prod
+        uses: jacobtomlinson/gha-find-replace@0.1.1
+        with:
+          find: '"start_url": "/"'
+          replace: '"start_url": "/flat-scan-vue-pwa/'
+          include: "dist/"
+
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@releases/v3
         with:

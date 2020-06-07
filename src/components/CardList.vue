@@ -53,7 +53,7 @@ export default {
       const result = await fetch(env.VUE_APP_URL, options);
       const data = await result.json();
 
-      const combinedData = data.flatMap(service => [...service.flats]);
+      const combinedData = data.flatMap((service) => [...service.flats]);
 
       console.log(combinedData);
 
