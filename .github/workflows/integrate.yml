@@ -28,8 +28,15 @@ jobs:
       - name: Find and replace to prod path
         uses: jacobtomlinson/gha-find-replace@0.1.1
         with:
-          find: "/img/soft-wallpaper.png"
-          replace: "/flat-scan-vue-pwa/img/soft-wallpaper.png"
+          find: "'/img/"
+          replace: "'/flat-scan-vue-pwa/img/"
+          include: "dist/"
+
+      - name: Find and replace to prod path
+        uses: jacobtomlinson/gha-find-replace@0.1.1
+        with:
+          find: '"/img/'
+          replace: "/flat-scan-vue-pwa/img/"
           include: "dist/"
 
       - name: Deploy 🚀
