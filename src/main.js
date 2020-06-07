@@ -8,5 +8,6 @@ Vue.config.productionTip = false;
 Vue.use(Buefy);
 
 new Vue({
+  // eslint-disable-next-line
   render: h => h(App),
 }).$mount('#app');
