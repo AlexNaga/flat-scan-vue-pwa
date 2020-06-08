@@ -12,7 +12,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/flat-scan-vue-pwa/img/bunny.f2e90107.png"
   },
   {
-    "revision": "4f1d4cfc5c49a23256165ed42239d53c",
+    "revision": "0e9acb16ea5435de7f7bdfe65d9d91d9",
     "url": "/flat-scan-vue-pwa/index.html"
   },
   {
