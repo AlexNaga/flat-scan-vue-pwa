@@ -7,7 +7,6 @@ module.exports = {
     appleMobileWebAppCapable: 'yes',
     appleMobileWebAppStatusBarStyle: 'black',
 
-    // manifestPath: 'public/manifest.json',
     manifestPath: 'manifest.json',
     manifestOptions: {
       start_url: './',
@@ -20,7 +19,7 @@ module.exports = {
           purpose: 'maskable',
         },
         {
-          src: './img/icons/manifest-icon-192.png',
+          src: './img/icons/manifest-icon-512.png',
           sizes: '512x512',
           type: 'image/png',
           purpose: 'maskable',
