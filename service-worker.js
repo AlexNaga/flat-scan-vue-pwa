@@ -2,3 +2,5 @@ importScripts("/flat-scan-vue-pwa/precache-manifest.a1af97efb7503a8c5f29b674f5f6
 
 // TODO: Add Web Push
 
+self.addEventListener('fetch', function (event) {});
+
