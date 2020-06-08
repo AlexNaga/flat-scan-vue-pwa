@@ -13,8 +13,9 @@
         </div>
       </section>
 
-      <b-button @click="$installer.prompt">Add to homescreen</b-button>
-      <section v-if="$installer.canInstall"></section>
+      <section v-if="$installer.canInstall">
+        <b-button @click="$installer.prompt">Add to homescreen</b-button>
+      </section>
     </div>
 
     <CardList />

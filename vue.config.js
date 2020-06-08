@@ -13,18 +13,16 @@ module.exports = {
       start_url: './',
       display: 'standalone',
       icons: [
-        { src: './img/icons/manifest-icon-192.jpg', sizes: '192x192', type: 'image/jpeg' },
-        { src: './img/icons/manifest-icon-512.jpg', sizes: '512x512', type: 'image/jpeg' },
         {
-          src: './img/icons/manifest-icon-192.jpg',
+          src: './img/icons/manifest-icon-192.png',
           sizes: '192x192',
-          type: 'image/jpeg',
+          type: 'image/png',
           purpose: 'maskable',
         },
         {
-          src: './img/icons/manifest-icon-192.jpg',
+          src: './img/icons/manifest-icon-192.png',
           sizes: '512x512',
-          type: 'image/jpeg',
+          type: 'image/png',
           purpose: 'maskable',
         },
       ],
