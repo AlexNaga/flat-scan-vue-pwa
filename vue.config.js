@@ -1,5 +1,6 @@
 module.exports = {
-  publicPath: process.env.NODE_ENV === 'production' ? '/flat-scan-vue-pwa/' : '/',
+  publicPath: './',
+  // publicPath: process.env.NODE_ENV === 'production' ? '/flat-scan-vue-pwa/' : '/',
   pwa: {
     name: 'flatScan',
     themeColor: '#FFF9E8',
@@ -16,13 +17,13 @@ module.exports = {
           src: './img/icons/manifest-icon-192x192.png',
           sizes: '192x192',
           type: 'image/png',
-          purpose: 'maskable',
+          purpose: 'maskable any',
         },
         {
           src: './img/icons/manifest-icon-512x512.png',
           sizes: '512x512',
           type: 'image/png',
-          purpose: 'maskable',
+          purpose: 'maskable any',
         },
       ],
     },
