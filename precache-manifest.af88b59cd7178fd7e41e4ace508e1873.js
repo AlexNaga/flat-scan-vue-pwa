@@ -24,7 +24,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/flat-scan-vue-pwa/js/chunk-vendors-legacy.bed455a3.js"
   },
   {
-    "revision": "41ac1eff302d0b5e50b2aed9813e1a58",
+    "revision": "cd422a61e519c27c65c6dc6d5d2904b0",
     "url": "/flat-scan-vue-pwa/manifest.json"
   }
 ]);
