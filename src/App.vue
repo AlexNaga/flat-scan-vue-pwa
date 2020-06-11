@@ -3,7 +3,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" />
 
     <div class="header">
-      <img alt="flatScan logo" src="./assets/img/bunny.png" />
+      <img alt="flatScan logo" src="./assets/img/bunny.png" id="logo" />
 
       <section class="hero">
         <div class="hero-body">
@@ -45,7 +45,10 @@ html {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 50px;
-  padding-bottom: 30px;
+  margin-top: 40px;
+}
+
+#logo {
+  max-width: 150px;
 }
 </style>
