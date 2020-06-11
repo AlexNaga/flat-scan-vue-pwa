@@ -46,6 +46,7 @@ html {
   text-align: center;
   color: #2c3e50;
   margin-top: 40px;
+  padding-bottom: 30px;
 }
 
 #logo {
