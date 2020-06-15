@@ -10,6 +10,7 @@ module.exports = {
 
     manifestPath: 'manifest.json',
     manifestOptions: {
+      gcm_sender_id: '103953800507',
       start_url: './',
       display: 'standalone',
       icons: [

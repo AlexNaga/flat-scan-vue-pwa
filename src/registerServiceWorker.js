@@ -2,9 +2,10 @@
 
 import { register } from 'register-service-worker';
 import { encode } from 'base64-arraybuffer';
+const env = process.env;
 
-if (process.env.NODE_ENV === 'production') {
-  register(`${process.env.BASE_URL}service-worker.js`, {
+if (env.NODE_ENV === 'production') {
+  register(`${env.BASE_URL}service-worker.js`, {
     registrationOptions: { scope: './' },
     ready() {
       console.log(
@@ -14,11 +15,10 @@ if (process.env.NODE_ENV === 'production') {
     async registered(registration) {
       console.log('Service worker has been registered with scope: ', registration.scope);
 
-      const applicationServerPublicKey = 'asd'; // TODO: Make this secret
-      const applicationServerKey = encode(applicationServerPublicKey);
+      const applicationServerKey = encode(env.VUE_APP_WEB_PUSH_PUBLIC_KEY);
       const subscription = await registration.pushManager.subscribe({
         userVisibleOnly: true,
-        applicationServerKey,
+        applicationServerKey: applicationServerKey,
       });
 
       console.log(subscription);

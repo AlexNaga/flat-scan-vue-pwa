@@ -42,7 +42,7 @@ export default {
 //   const url = 'https://k8b2vri9ga.execute-api.eu-north-1.amazonaws.com/test/subscription';
 //   const data = { subscription };
 
-//   const apiKey = 'Yg0SAzdhgV1jirIXPDy941lvR4pW1AXB8iccJGjd'; // TODO: Make this a secret
+//   const apiKey = 'asd123'; // TODO: Create / force a new secret since this has been commited
 
 //   // Default options are marked with *
 //   const response = await fetch(url, {
