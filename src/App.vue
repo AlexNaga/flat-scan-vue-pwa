@@ -25,6 +25,7 @@
 
 <script>
 import CardList from './components/CardList.vue';
+// import { encode } from 'base64-arraybuffer';
 
 export default {
   name: 'App',
@@ -34,8 +35,27 @@ export default {
 };
 
 // const isWebPushSupported = () => 'serviceWorker' in navigator && 'PushManager' in window && 'Notification' in window;
-// const saveSubscription = () => {
+
+// const saveSubscription = async (subscription) => {
 //   // TODO: Make HTTP request to backend save endpoint
+
+//   const url = 'https://k8b2vri9ga.execute-api.eu-north-1.amazonaws.com/test/subscription';
+//   const data = { subscription };
+
+//   const apiKey = 'Yg0SAzdhgV1jirIXPDy941lvR4pW1AXB8iccJGjd'; // TODO: Make this a secret
+
+//   // Default options are marked with *
+//   const response = await fetch(url, {
+//     method: 'PUT',
+//     mode: 'cors',
+//     headers: {
+//       'Content-Type': 'application/json',
+//       'x-api-key': apiKey,
+//     },
+//     body: JSON.stringify(data), // body data type must match "Content-Type" header
+//   });
+
+//   return response.json();
 // };
 
 // const subscribeUser = async () => {
@@ -43,11 +63,11 @@ export default {
 //     console.log('hej');
 //   }
 
-//   const applicationServerPublicKey = 'asd';
-//   const applicationServerKey = window.urlB64ToUint8Array(applicationServerPublicKey);
+//   const applicationServerPublicKey = 'asd'; // TODO: Make this secret
+//   const applicationServerKey = encode(applicationServerPublicKey);
 //   const subscription = await window.swRegistration.pushManager.subscribe({
 //     userVisibleOnly: true,
-//     applicationServerKey: applicationServerKey,
+//     applicationServerKey,
 //   });
 
 //   console.log('User is subscribed.');
@@ -57,6 +77,8 @@ export default {
 //     console.log('Failed to subscribe the user: ', error);
 //   }
 // };
+
+// subscribeUser();
 </script>
 
 <style lang="scss">

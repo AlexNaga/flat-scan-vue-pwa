@@ -48,9 +48,10 @@ export default {
     async getData() {
       const options = {
         headers: { 'x-api-key': env.VUE_APP_API_KEY },
+        mode: 'cors',
       };
 
-      const result = await fetch(env.VUE_APP_URL, options);
+      const result = await fetch(`${env.VUE_APP_URL}/flats`, options);
       const data = await result.json();
 
       const combinedData = data.flatMap((service) => [...service.flats]);
