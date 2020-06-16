@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "0ffdd28584e7224aaaf9",
+    "revision": "e89ea64d66698180c32e",
     "url": "css/app.3ffac512.css"
   },
   {
@@ -16,12 +16,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "img/soft-wallpaper.png"
   },
   {
-    "revision": "04e654a52eec2b8cabd6e2fcc725a7e3",
+    "revision": "3ec378d3cb99046b4c02434aee1569f9",
     "url": "index.html"
   },
   {
-    "revision": "0ffdd28584e7224aaaf9",
-    "url": "js/app.66cc0e0a.js"
+    "revision": "e89ea64d66698180c32e",
+    "url": "js/app.2ea3cdfd.js"
   },
   {
     "revision": "3aa7531fac9963a2e171",
