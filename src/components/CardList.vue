@@ -48,7 +48,7 @@ export default {
     async getData() {
       const options = {
         headers: { 'x-api-key': env.VUE_APP_API_KEY },
-        mode: 'cors',
+        // mode: 'cors',
       };
 
       const result = await fetch(`${env.VUE_APP_URL}/flats`, options);
