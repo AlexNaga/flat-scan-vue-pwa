@@ -5,7 +5,7 @@
   "scripts": {
     "start": "vue-cli-service serve",
     "build": "vue-cli-service build --modern",
-    "test:service-worker": "npm run build && api-now -s ./dist",
+    "test:sw": "npm run build && api-now -s ./dist",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {

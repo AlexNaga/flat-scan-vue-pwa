@@ -10,7 +10,7 @@ module.exports = {
 
     manifestPath: 'manifest.json',
     manifestOptions: {
-      gcm_sender_id: '103953800507',
+      gcm_sender_id: 'https://alexnaga.github.io/flat-scan-vue-pwa',
       start_url: './',
       display: 'standalone',
       icons: [
