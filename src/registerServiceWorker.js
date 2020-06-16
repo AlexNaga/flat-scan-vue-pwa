@@ -15,6 +15,8 @@ if (env.NODE_ENV === 'production') {
     async registered(registration) {
       console.log('Service worker has been registered with scope: ', registration.scope);
 
+      console.log('PUBLIC_KEY: ', env.VUE_APP_WEB_PUSH_PUBLIC_KEY);
+
       const applicationServerKey = urlBase64ToUint8Array(env.VUE_APP_WEB_PUSH_PUBLIC_KEY);
 
       try {
@@ -55,7 +57,7 @@ const saveSubscription = async (subscription) => {
   const apiKey = env.VUE_APP_API_KEY;
 
   const response = await fetch(url, {
-    method: 'PUT',
+    method: 'POST',
     mode: 'no-cors',
     headers: {
       'Content-Type': 'application/json',
