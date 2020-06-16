@@ -3,11 +3,13 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "start": "vue-cli-service serve",
     "build": "vue-cli-service build --modern",
-    "lint": "vue-cli-service lint",
-    "start": "vue-cli-service serve"
+    "test:service-worker": "npm run build && api-now -s ./dist",
+    "lint": "vue-cli-service lint"
   },
   "dependencies": {
+    "api-now": "^0.5.4",
     "base64-arraybuffer": "^0.2.0",
     "buefy": "^0.8.20",
     "core-js": "^3.6.5",

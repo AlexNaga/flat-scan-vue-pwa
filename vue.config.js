@@ -32,12 +32,12 @@ module.exports = {
           type: 'image/png',
           purpose: 'maskable any',
         },
-        {
-          src: './img/icons/icon-144x144.png',
-          sizes: '144x144',
-          type: 'image/png',
-          purpose: 'maskable any',
-        },
+        // {
+        //   src: './img/icons/icon-144x144.png',
+        //   sizes: '144x144',
+        //   type: 'image/png',
+        //   purpose: 'maskable any',
+        // },
         {
           src: './img/icons/icon-152x152.png',
           sizes: '152x152',

@@ -1,7 +1,7 @@
 /* eslint-disable no-console */
 
 import { register } from 'register-service-worker';
-import { encode } from 'base64-arraybuffer';
+import { decode } from 'base64-arraybuffer';
 const env = process.env;
 
 if (env.NODE_ENV === 'production') {
@@ -15,15 +15,23 @@ if (env.NODE_ENV === 'production') {
     async registered(registration) {
       console.log('Service worker has been registered with scope: ', registration.scope);
 
-      const applicationServerKey = encode(env.VUE_APP_WEB_PUSH_PUBLIC_KEY);
-      const subscription = await registration.pushManager.subscribe({
-        userVisibleOnly: true,
-        applicationServerKey: applicationServerKey,
-      });
+      const applicationServerKey = decode(env.VUE_APP_WEB_PUSH_PUBLIC_KEY);
 
-      console.log(subscription);
+      try {
+        const subscription = await registration.pushManager.subscribe({
+          userVisibleOnly: true, // At this time, it must currently be set to `true`
+          applicationServerKey,
+        });
 
-      console.log('User is subscribed.');
+        console.log(subscription);
+
+        console.log('User is subscribed to Web Push notifications.');
+
+        // TODO: Make HTTP request to backend and save the subscription to the DB
+        saveSubscription(subscription);
+      } catch (error) {
+        console.warn('Failed to subscribe the user to Web Push notifications.', error);
+      }
     },
     cached() {
       console.log('Content has been cached for offline use.');
@@ -42,3 +50,24 @@ if (env.NODE_ENV === 'production') {
     },
   });
 }
+
+const saveSubscription = async (subscription) => {
+  const url = 'https://k8b2vri9ga.execute-api.eu-north-1.amazonaws.com/test/subscription';
+  const data = { subscription };
+
+  const apiKey = 'Yg0SAzdhgV1jirIXPDy941lvR4pW1AXB8iccJGjd'; // TODO: Create / force a new secret since this has been commited
+
+  const response = await fetch(url, {
+    method: 'PUT',
+    mode: 'cors',
+    headers: {
+      'Content-Type': 'application/json',
+      'x-api-key': apiKey,
+    },
+    body: JSON.stringify(data),
+  });
+
+  console.log('Subscription saved to DB.');
+
+  return response.json();
+};

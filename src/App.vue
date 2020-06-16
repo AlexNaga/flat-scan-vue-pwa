@@ -25,7 +25,6 @@
 
 <script>
 import CardList from './components/CardList.vue';
-// import { encode } from 'base64-arraybuffer';
 
 export default {
   name: 'App',
@@ -33,52 +32,6 @@ export default {
     CardList,
   },
 };
-
-// const isWebPushSupported = () => 'serviceWorker' in navigator && 'PushManager' in window && 'Notification' in window;
-
-// const saveSubscription = async (subscription) => {
-//   // TODO: Make HTTP request to backend save endpoint
-
-//   const url = 'https://k8b2vri9ga.execute-api.eu-north-1.amazonaws.com/test/subscription';
-//   const data = { subscription };
-
-//   const apiKey = 'asd123'; // TODO: Create / force a new secret since this has been commited
-
-//   // Default options are marked with *
-//   const response = await fetch(url, {
-//     method: 'PUT',
-//     mode: 'cors',
-//     headers: {
-//       'Content-Type': 'application/json',
-//       'x-api-key': apiKey,
-//     },
-//     body: JSON.stringify(data), // body data type must match "Content-Type" header
-//   });
-
-//   return response.json();
-// };
-
-// const subscribeUser = async () => {
-//   if (isWebPushSupported()) {
-//     console.log('hej');
-//   }
-
-//   const applicationServerPublicKey = 'asd'; // TODO: Make this secret
-//   const applicationServerKey = encode(applicationServerPublicKey);
-//   const subscription = await window.swRegistration.pushManager.subscribe({
-//     userVisibleOnly: true,
-//     applicationServerKey,
-//   });
-
-//   console.log('User is subscribed.');
-//   try {
-//     saveSubscription(subscription);
-//   } catch (error) {
-//     console.log('Failed to subscribe the user: ', error);
-//   }
-// };
-
-// subscribeUser();
 </script>
 
 <style lang="scss">
