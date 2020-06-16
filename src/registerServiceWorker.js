@@ -57,8 +57,8 @@ const saveSubscription = async (subscription) => {
   const apiKey = env.VUE_APP_API_KEY;
 
   const response = await fetch(url, {
-    method: 'POST',
-    mode: 'no-cors',
+    method: 'PUT',
+    // mode: 'no-cors',
     headers: {
       'Content-Type': 'application/json',
       'x-api-key': apiKey,
