@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "37da1feaff9123e7b279",
+    "revision": "7a6b29228c2a2cc8367c",
     "url": "css/app.3ffac512.css"
   },
   {
-    "revision": "3208085dda4d62e4662a",
+    "revision": "f821991f14db7a3cfe33",
     "url": "css/chunk-vendors.33eb119a.css"
   },
   {
@@ -16,19 +16,19 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "img/soft-wallpaper.png"
   },
   {
-    "revision": "ce85b4b8d51b63356ff410685906ff70",
+    "revision": "05231ba749147cc975e1bd3680ccb5a2",
     "url": "index.html"
   },
   {
-    "revision": "37da1feaff9123e7b279",
-    "url": "js/app.f4bcc344.js"
+    "revision": "7a6b29228c2a2cc8367c",
+    "url": "js/app.95163909.js"
   },
   {
-    "revision": "3208085dda4d62e4662a",
-    "url": "js/chunk-vendors.92206646.js"
+    "revision": "f821991f14db7a3cfe33",
+    "url": "js/chunk-vendors.2023a80b.js"
   },
   {
-    "revision": "7521d9908d3893fe8ad2d0a82c1a3db9",
+    "revision": "eeddd9319adef63e4dc232a3f7d59ad8",
     "url": "manifest.json"
   },
   {
