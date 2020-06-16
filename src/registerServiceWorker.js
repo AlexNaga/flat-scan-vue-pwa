@@ -49,10 +49,10 @@ if (env.NODE_ENV === 'production') {
 }
 
 const saveSubscription = async (subscription) => {
-  const url = 'https://k8b2vri9ga.execute-api.eu-north-1.amazonaws.com/test/subscription';
+  const url = `${env.VUE_APP_URL}/subscription`;
   const data = { subscription };
 
-  const apiKey = 'Yg0SAzdhgV1jirIXPDy941lvR4pW1AXB8iccJGjd'; // TODO: Create / force a new secret since this has been commited
+  const apiKey = env.VUE_APP_API_KEY;
 
   const response = await fetch(url, {
     method: 'PUT',
