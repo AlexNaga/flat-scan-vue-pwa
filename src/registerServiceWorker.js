@@ -19,18 +19,15 @@ if (env.NODE_ENV === 'production') {
 
       try {
         const subscription = await registration.pushManager.subscribe({
-          userVisibleOnly: true, // At this time, it must currently be set to `true`
+          userVisibleOnly: true, // Visibly notify the user
           applicationServerKey,
         });
 
-        console.log(subscription);
+        console.log('User is subscribed to web push notifications.');
 
-        console.log('User is subscribed to Web Push notifications.');
-
-        // TODO: Make HTTP request to backend and save the subscription to the DB
         saveSubscription(subscription);
       } catch (error) {
-        console.warn('Failed to subscribe the user to Web Push notifications.', error);
+        console.warn('Failed to subscribe the user to web push notifications.', error);
       }
     },
     cached() {
