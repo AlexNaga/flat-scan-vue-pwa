@@ -59,7 +59,7 @@ const saveSubscription = async (subscription) => {
 
   const response = await fetch(url, {
     method: 'PUT',
-    mode: 'cors',
+    mode: 'no-cors',
     headers: {
       'Content-Type': 'application/json',
       'x-api-key': apiKey,
