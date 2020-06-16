@@ -1,7 +1,5 @@
 'use strict';
 
-// TODO: Add Web Push
-
 /* Listen for received push notifications */
 self.addEventListener('push', (event) => {
   if (!event.data) return;
@@ -15,9 +13,9 @@ self.addEventListener('push', (event) => {
     tag: data.tag || null,
     renotify: true,
     // eslint-disable-next-line no-undef
-    icon: env.origin + '/icons/icon-72x72.png',
+    icon: './icons/icon-72x72.png',
     // eslint-disable-next-line no-undef
-    badge: env.origin + '/icons/icon-72x72.png',
+    badge: './icons/icon-72x72.png',
     data: {
       redirectionUrl: data.url,
     },

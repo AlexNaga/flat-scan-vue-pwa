@@ -1,7 +1,7 @@
 /* eslint-disable no-console */
 
 import { register } from 'register-service-worker';
-import { decode } from 'base64-arraybuffer';
+import { urlBase64ToUint8Array } from './lib/helpers';
 const env = process.env;
 
 if (env.NODE_ENV === 'production') {
@@ -15,7 +15,7 @@ if (env.NODE_ENV === 'production') {
     async registered(registration) {
       console.log('Service worker has been registered with scope: ', registration.scope);
 
-      const applicationServerKey = decode(env.VUE_APP_WEB_PUSH_PUBLIC_KEY);
+      const applicationServerKey = urlBase64ToUint8Array(env.VUE_APP_WEB_PUSH_PUBLIC_KEY);
 
       try {
         const subscription = await registration.pushManager.subscribe({
