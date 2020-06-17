@@ -24,7 +24,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "img/soft-wallpaper.png"
   },
   {
-    "revision": "23244ade9e0c4c03b28a48f76d09ca1a",
+    "revision": "7b2e1895c8d1e513d2c2987dd76099ef",
     "url": "index.html"
   },
   {
