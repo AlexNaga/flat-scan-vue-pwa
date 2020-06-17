@@ -8,6 +8,14 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "css/chunk-vendors.33eb119a.css"
   },
   {
+    "revision": "52a7a05201441c279c0b609ade24fe13",
+    "url": "favicon-16x16.png"
+  },
+  {
+    "revision": "ca60d11b05b997831fe9464f03be0559",
+    "url": "favicon-32x32.png"
+  },
+  {
     "revision": "f2e901077ce82fae2ea4867733bc27ef",
     "url": "img/bunny.f2e90107.png"
   },
@@ -16,7 +24,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "img/soft-wallpaper.png"
   },
   {
-    "revision": "47da7225e675cda87807981885a892ae",
+    "revision": "8dce10394d6ba40977b43df1c66e5061",
     "url": "index.html"
   },
   {
