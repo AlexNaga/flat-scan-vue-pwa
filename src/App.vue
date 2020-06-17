@@ -1,14 +1,12 @@
 <template>
   <div id="app">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" />
-
     <div class="header">
       <img alt="flatScan logo" src="./assets/img/bunny.png" id="logo" />
 
       <section class="hero">
         <div class="hero-body">
           <div class="container">
-            <h1 class="title">Welcome to flatScan</h1>
+            <h1 class="ui header">Welcome to flatScan</h1>
           </div>
         </div>
       </section>
@@ -17,8 +15,8 @@
     <CardList />
 
     <footer class="footer">
-      <b-button v-if="$installer.canInstall" @click="$installer.prompt">Add to homescreen</b-button>
-      <b-button>Enable notifications</b-button>
+      <button class="ui button" v-if="$installer.canInstall" @click="$installer.prompt">Add to homescreen</button>
+      <button class="ui button">Enable notifications</button>
     </footer>
   </div>
 </template>
@@ -56,8 +54,8 @@ footer {
 }
 
 .footer {
-  b-button {
-    margin: 16px;
-  }
+  // button {
+  //   margin: 16px;
+  // }
 }
 </style>

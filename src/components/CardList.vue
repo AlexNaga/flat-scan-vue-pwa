@@ -6,7 +6,7 @@
       <div class="content-wrapper" v-else key="flat-list">
         <h1 class="subtitle">{{ availableFlats }}</h1>
 
-        <div class="grid-container">
+        <div class="grid-container ui link cards">
           <Card
             v-for="flat in flats"
             :key="flat.id"

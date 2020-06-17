@@ -1,18 +1,29 @@
 <template>
   <div class="card">
-    <div class="card-image">
-      <figure class="image is-1by1">
-        <a :href="url">
-          <img :src="imgUrl" />
-        </a>
-      </figure>
+    <div class="image">
+      <img :src="imgUrl" />
+      <a :href="url" />
     </div>
-    <div class="card-content">
-      <div class="content">
-        <b-table :data="data" :columns="columns" :narrowed="false" />
-        <a :href="mapUrl">View on Google maps</a>
-        <p class="subtitle is-6">Date updated: {{ dateUpdated }}</p>
+
+    <div class="content">
+      <b-table :data="data" :columns="columns" :narrowed="false" />
+
+      <div class="header">Molly</div>
+      <div class="meta">
+        <span class="date">Coworker</span>
       </div>
+      <div class="description">Molly is a personal assistant living in Paris.</div>
+
+      <a :href="mapUrl">View on Google maps</a>
+      <p class="subtitle is-6">Date updated: {{ dateUpdated }}</p>
+    </div>
+
+    <div class="extra content">
+      <span class="right floated">Joined in 2011</span>
+      <span>
+        <i class="user icon"></i>
+        35 Friends
+      </span>
     </div>
   </div>
 </template>
@@ -80,6 +91,10 @@ export default {
   transition: box-shadow 0.2s ease;
   transition: transform 0.2s;
   transform: scale(1.01);
+}
+
+.image {
+  max-height: 400px;
 }
 
 // TODO: Make left text normal and right side bolder

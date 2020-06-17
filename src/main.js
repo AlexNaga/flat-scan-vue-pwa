@@ -1,14 +1,12 @@
 import Vue from 'vue';
 import App from './App.vue';
-import Buefy from 'buefy';
-import 'buefy/dist/buefy.css';
+import './../semantic/dist/semantic.css';
 import './registerServiceWorker';
 import VueInstaller from 'vue-pwa-installer';
 
 Vue.use(VueInstaller);
 
 Vue.config.productionTip = false;
-Vue.use(Buefy);
 
 new Vue({
   // eslint-disable-next-line
