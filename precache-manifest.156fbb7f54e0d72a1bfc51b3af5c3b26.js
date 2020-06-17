@@ -16,7 +16,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "img/soft-wallpaper.png"
   },
   {
-    "revision": "f4d89fb335905532b47a8b3f06fc6fdc",
+    "revision": "47da7225e675cda87807981885a892ae",
     "url": "index.html"
   },
   {
@@ -28,7 +28,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "js/chunk-vendors.12e0d695.js"
   },
   {
-    "revision": "d5296bc223f4f2198f2208944882e826",
+    "revision": "c1158b8d9bdfde6d6347444aa95e507b",
     "url": "manifest.json"
   },
   {
