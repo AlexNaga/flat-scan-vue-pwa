@@ -17,9 +17,6 @@ if (env.NODE_ENV === 'production') {
 
       const applicationServerKey = urlBase64ToUint8Array(env.VUE_APP_WEB_PUSH_PUBLIC_KEY);
 
-      console.log(env.VUE_APP_WEB_PUSH_PUBLIC_KEY);
-      console.log({ applicationServerKey });
-
       try {
         const subscription = await registration.pushManager.subscribe({
           userVisibleOnly: true, // Visibly notify the user
