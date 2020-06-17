@@ -48,20 +48,24 @@ export default {
     async getData() {
       const options = {
         headers: { 'x-api-key': env.VUE_APP_API_KEY },
-        // mode: 'cors',
+        mode: 'cors',
       };
 
-      const result = await fetch(`${env.VUE_APP_URL}/flats`, options);
-      const data = await result.json();
+      try {
+        const result = await fetch(`${env.VUE_APP_URL}/flats`, options);
+        const data = await result.json();
 
-      const combinedData = data.flatMap((service) => [...service.flats]);
+        const combinedData = data.flatMap((service) => [...service.flats]);
 
-      console.log(combinedData);
+        console.log(combinedData);
 
-      setTimeout(() => {
-        this.isLoading = false;
-        this.flats = combinedData ? combinedData : [];
-      }, 800);
+        setTimeout(() => {
+          this.isLoading = false;
+          this.flats = combinedData ? combinedData : [];
+        }, 800);
+      } catch (error) {
+        console.log(error);
+      }
     },
   },
 };
