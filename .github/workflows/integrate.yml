@@ -24,6 +24,7 @@ jobs:
         env:
           VUE_APP_URL: ${{ secrets.API_URL }}
           VUE_APP_API_KEY: ${{ secrets.API_KEY }}
+          VUE_APP_WEB_PUSH_PUBLIC_KEY: ${{ secrets.WEB_PUSH_PUBLIC_KEY }}
 
       - name: Find and replace bg path to prod
         uses: jacobtomlinson/gha-find-replace@0.1.1
