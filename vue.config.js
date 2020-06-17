@@ -65,14 +65,11 @@ module.exports = {
       ],
     },
 
-    // iconPaths: {
-    // favicon16: 'img/icons/favicon-16x16.png',
-    // favicon32: 'img/icons/favicon-32x32.png',
-    // maskIcon: './img/icons/android/manifest-icon-512.jpg',
-    // msTileImage: 'img/icons/icon-144x144.png',
-    // appleTouchIcon: 'img/icons/icon-152x152.png',
-    // },
-
+    iconPaths: {
+      favicon16: './favicon-16x16.png',
+      favicon32: './favicon-32x32.png',
+      appleTouchIcon: './img/icons/ios/touch-icon-152x152.png',
+    },
     workboxPluginMode: 'InjectManifest',
     workboxOptions: {
       swSrc: 'src/service-worker.js',
